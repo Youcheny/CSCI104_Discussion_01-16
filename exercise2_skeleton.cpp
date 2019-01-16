@@ -7,6 +7,20 @@ using namespace std;
 
 string* readFile(const string& filename) {
 	// TO DO
+	ifstream iss(filename.c_str());
+	string line;
+	string* arr = NULL;
+	int size = 0;
+	while (getline(iss, line)) {
+		if (arr == NULL) {
+			// TODO
+		}
+		else {
+			// TODO
+		}
+		++size;
+	}
+	return arr;
 }
 
 void coutFile(string* arr) {
@@ -16,7 +30,7 @@ void coutFile(string* arr) {
 }
 
 void deallocate(string* arr) {
-	// TO DO
+	delete [] arr;
 }
 
 int main() {
