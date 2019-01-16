@@ -4,6 +4,12 @@
 
 using namespace std;
 
+/** Given a text file, read every line of it into a dynamically allocated string* array
+	* While reading, you will need to expand the size of your string* array on the fly as you don't know how many lines there will be in total
+	* You will implement two parts in the code, marked by // TODO
+	* If your implementation is correct, the program will print out a poem from Shakespeare's play, Hamlet.
+	*/
+
 string* readFile(const string& filename) {
 	ifstream iss(filename.c_str());
 	string line;
@@ -36,3 +42,4 @@ int main() {
 	coutFile(arr);
 	deallocate(arr);
 }
+
