@@ -5,7 +5,7 @@
 using namespace std;
 
 /** You are a cashier at your local supermarket and at one point in your career you begin to wonder a question...
-	*	Given a set of bills (like {$1, $5, $10, $20, $50, $100}) and an amount of change I need to give a customer,
+	* Given a set of bills (like {$1, $5, $10, $20, $50, $100}) and an amount of change you need to give a customer,
 	* how many different change combinations can you provide, assuming you have an infinite number of bills of each value? 
 	* For example, to give a change of $15, you can have 6 combinations to form this change:
 	* $1 * 15 = $15
