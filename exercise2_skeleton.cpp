@@ -1,22 +1,20 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <sstream>
 
 using namespace std;
 
 string* readFile(const string& filename) {
-	// TO DO
 	ifstream iss(filename.c_str());
 	string line;
 	string* arr = NULL;
 	int size = 0;
 	while (getline(iss, line)) {
 		if (arr == NULL) {
-			// TODO
+			// TODO: allocate an array of size 1
 		}
 		else {
-			// TODO
+			// TODO: increase the array size by 1 push line to the back of the array
 		}
 		++size;
 	}
