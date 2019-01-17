@@ -1,45 +1,31 @@
 #include <iostream>
+#include <vector>
 #include <string>
-#include <fstream>
 
 using namespace std;
 
-/** Given a text file, read every line of it into a dynamically allocated string* array
-	* While reading, you will need to expand the size of your string* array on the fly as you don't know how many lines there will be in total
-	* You will implement two parts in the code, marked by // TODO
-	* If your implementation is correct, the program will print out a poem from Shakespeare's play, Hamlet.
-	*/
+/** You are a cashier at your local supermarket and at one point in your career you begin to wonder a question...
+	* Given a set of bills (like {$1, $5, $10, $20, $50, $100}) and an amount of change you need to give a customer,
+	* how many different change combinations can you provide, assuming you have an infinite number of bills of each value? 
+	* For example, to give a change of $15, you can have 6 combinations to form this change:
+	* $1 * 15 = $15
+	* $5 * 1 + $1 * 10 = $15
+	* $5 * 2 + $1 * 5 = $15
+	* $5 * 3 = $15
+	* $10 * 1 + $1 * 5 = $15
+	* $10 * 1 + $5 * 1 = $15
+ 	*/
 
-string* readFile(const string& filename) {
-	ifstream iss(filename.c_str());
-	string line;
-	string* arr = NULL;
-	int size = 0;
-	while (getline(iss, line)) {
-		if (arr == NULL) {
-			// TODO: allocate an array of size 1
-		}
-		else {
-			// TODO: increase the array size by 1 push line to the back of the array
-		}
-		++size;
-	}
-	return arr;
-}
+int countCoinCombinations(int change, vector<int>& bills);
+int countCoinCombinationsHelper(int change, vector<int>& bills, int curr); 
+// The above helper function may be helpful but is not required, you can choose to use it or define your own
 
-void coutFile(string* arr) {
-	for (int i=0; arr[i] != "END"; ++i) {
-		cout << arr[i] << endl;
-	}
-}
-
-void deallocate(string* arr) {
-	delete [] arr;
+int countCoinCombinations(int change, vector<int>& bills) {
+	// TODO
 }
 
 int main() {
-	string* arr = readFile("test.in");
-	coutFile(arr);
-	deallocate(arr);
-}
+	vector<int> bills = {1, 5, 10, 20, 50, 100};
+	cout << countCoinCombinations(15, bills) << endl;
 
+}
