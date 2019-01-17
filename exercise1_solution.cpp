@@ -18,17 +18,17 @@ string* readFile(const string& filename) {
 	while (getline(iss, line)) {
 		if (arr == NULL) {
 			// TODO: allocate an array of size 1
-            arr = new string[1];
-            arr[0] = line;
+      arr = new string[1];
+      arr[0] = line;
 		}
 		else {
 			// TODO: increase the array size by 1 push line to the back of the array
-            string* newarr = new string[size + 1];
-            for (int i=0; i<size; ++i)
-                newarr[i] = arr[i];
-            newarr[size] = line;
-            delete [] arr;
-            arr = newarr;
+      string* newarr = new string[size + 1];
+      for (int i=0; i<size; ++i)
+          newarr[i] = arr[i];
+      newarr[size] = line;
+      delete [] arr;
+      arr = newarr;
 		}
 		++size;
 	}
